@@ -13,6 +13,13 @@
     "url": "git+https://github.com/juanfrank77/foam-eleventy-template.git"
   },
   "author": "Juan F Gonzalez <juano_gonza@hotmail.com>",
+  "contributors": [
+    {
+      "name": "Omar López",
+      "email": "zomars@me.com",
+      "url": "https://zoma.rs"
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/juanfrank77/foam-eleventy-template/issues"
