@@ -1,7 +1,4 @@
----
-layout: default.njk
-title: Foam
----
+# Foam
 
 👋 Welcome to your new Foam Eleventy Workspace!
 

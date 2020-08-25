@@ -8,6 +8,7 @@ const outputFile = path.join(__dirname, '../../assets/css/style.css')
 module.exports = class {
   data() {
     return {
+      layout: '',
       permalink: 'assets/css/style.css',
       eleventyExcludeFromCollections: true
     }
