@@ -1,7 +1,5 @@
 module.exports = (eleventyConfig) => {
 
-  eleventyConfig.addPassthroughCopy('assets/css');
-
   return {
     dir: {
       input: ".",
@@ -10,10 +8,11 @@ module.exports = (eleventyConfig) => {
       layouts: "_layouts"
     },
     templateFormats: [
+      "js",
       "md",
       "html",
       "liquid"
     ],
     passthroughFileCopy: true
   };
-}; 
+};
