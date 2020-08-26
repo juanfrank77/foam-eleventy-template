@@ -19,7 +19,13 @@ module.exports = (eleventyConfig) => {
       const isRelative = isRelativePattern.test(link);
 
       if (isRelative) {
-        return env.page.url.replace(lastSegmentPattern, link);
+        const hasLastSegment = lastSegmentPattern.exec(env.page.url);
+        // If it's nested, replace the last segment
+        if (hasLastSegment) {
+          return env.page.url.replace(lastSegmentPattern, link);
+        }
+        // If it's at root, just add the beginning slash
+        return env.page.url + link;
       }
 
       return link;
