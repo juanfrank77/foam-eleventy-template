@@ -28,6 +28,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "clean-css": "4.2.3",
+    "markdown-it": "11.0.0",
+    "markdown-it-replace-link": "1.1.0",
     "node-sass-promise": "1.0.0"
   }
 }
