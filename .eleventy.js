@@ -1,7 +1,7 @@
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy(".htaccess");
   eleventyConfig.addTransform("wiki-links", function (content, outputPath) {
-    if (outputPath.endsWith(".html")) {
+    if (outputPath && outputPath.endsWith(".html")) {
       // We remove outer brackets from links
       let output = content.replace(/(\[+(\<a(.*?)\<\/a\>)\]+)/g, "$2");
       return output;
@@ -21,7 +21,7 @@ module.exports = (eleventyConfig) => {
       if (isRelative) {
         const hasLastSegment = lastSegmentPattern.exec(env.page.url);
         // If it's nested, replace the last segment
-        if (hasLastSegment) {
+        if (hasLastSegment && env.page.url) {
           return env.page.url.replace(lastSegmentPattern, link);
         }
         // If it's at root, just add the beginning slash
