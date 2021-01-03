@@ -4,7 +4,7 @@
   "description": "template to create a foam workspace with eleventy",
   "scripts": {
     "start": "eleventy --serve --watch",
-    "clean": "rm -rf ./_site",
+    "clean": "rimraf ./_site",
     "build": "npm run clean && eleventy",
     "debug": "DEBUG=* eleventy"
   },
@@ -30,6 +30,7 @@
     "clean-css": "4.2.3",
     "markdown-it": "11.0.0",
     "markdown-it-replace-link": "1.1.0",
-    "node-sass-promise": "1.0.0"
+    "node-sass-promise": "1.0.0",
+    "rimraf": "^3.0.2"
   }
 }
